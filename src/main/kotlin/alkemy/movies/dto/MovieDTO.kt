@@ -15,5 +15,4 @@ data class MovieDTO(
     var available: Boolean = true,
     var genre: Genre? = Genre()
 
-        ){
-}
+)

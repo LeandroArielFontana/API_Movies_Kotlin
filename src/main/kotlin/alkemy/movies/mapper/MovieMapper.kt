@@ -5,7 +5,7 @@ import alkemy.movies.model.Movie
 import org.springframework.stereotype.Component
 
 @Component("movieMapper")
-class MovieMapper : AbstractMapper <MovieDTO, Movie> {
+class MovieMapper : AbstractMapper<MovieDTO, Movie> {
 
     override fun toEntity(dto: MovieDTO) =
         Movie(
@@ -28,5 +28,4 @@ class MovieMapper : AbstractMapper <MovieDTO, Movie> {
             available = entity.available,
             genre = null
         )
-
 }

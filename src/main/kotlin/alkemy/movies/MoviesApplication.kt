@@ -7,9 +7,9 @@ import org.springframework.scheduling.annotation.EnableAsync
 
 @SpringBootApplication
 @EnableJpaAuditing
-@EnableAsync //MAIL
+@EnableAsync // MAIL
 class MoviesApplication
 
 fun main(args: Array<String>) {
-	runApplication<MoviesApplication>(*args)
+    runApplication<MoviesApplication>(*args)
 }

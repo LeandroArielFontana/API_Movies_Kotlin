@@ -11,7 +11,7 @@ abstract class AbstractService<D, E : Any, ID : Any> (
     private val repository: PagingAndSortingRepository<E, ID>,
     private val mapper: AbstractMapper<D, E>
 
-    ){
+) {
 
     fun findAll(pageable: Pageable) =
         repository

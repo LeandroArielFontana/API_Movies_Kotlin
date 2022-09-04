@@ -6,12 +6,12 @@ import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.time.LocalDate
-import javax.persistence.*
+import javax.persistence.* // ktlint-disable no-wildcard-imports
 
 @Entity
 @EntityListeners(AuditingEntityListener::class)
-@SQLDelete(sql="UPDATE Genre g SET g.available = false WHERE g.id = ?")
-class Genre (
+@SQLDelete(sql = "UPDATE Genre g SET g.available = false WHERE g.id = ?")
+class Genre(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,5 +29,4 @@ class Genre (
     @JsonIgnore
     var modifiedDate: LocalDate = LocalDate.now()
 
-        ) {
-}
+)

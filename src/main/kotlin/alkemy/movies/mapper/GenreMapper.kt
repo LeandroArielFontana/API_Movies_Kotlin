@@ -5,7 +5,7 @@ import alkemy.movies.model.Genre
 import org.springframework.stereotype.Component
 
 @Component("genreMapper")
-class GenreMapper : AbstractMapper <GenreDTO, Genre> {
+class GenreMapper : AbstractMapper<GenreDTO, Genre> {
 
     override fun toEntity(dto: GenreDTO) =
         Genre(

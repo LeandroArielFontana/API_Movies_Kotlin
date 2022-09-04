@@ -6,13 +6,13 @@ import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.time.LocalDate
-import javax.persistence.*
+import javax.persistence.* // ktlint-disable no-wildcard-imports
 
 @Entity
 @EntityListeners(AuditingEntityListener::class)
-@SQLDelete(sql="UPDATE UserLogin u SET u.available = false WHERE u.id = ?")
+@SQLDelete(sql = "UPDATE UserLogin u SET u.available = false WHERE u.id = ?")
 @Table(name = "characters", schema = "disney_movies")
-class UserLogin (
+class UserLogin(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,5 +32,4 @@ class UserLogin (
     @JsonIgnore
     var modifiedDate: LocalDate? = null
 
-        ) {
-}
+)

@@ -28,5 +28,4 @@ class CharacterMapper : AbstractMapper<CharacterDTO, Character> {
             movies = null,
             available = entity.available
         )
-
 }

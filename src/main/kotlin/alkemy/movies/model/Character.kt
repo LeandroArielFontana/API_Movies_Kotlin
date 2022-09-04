@@ -7,19 +7,19 @@ import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.time.LocalDate
-import javax.persistence.*
+import javax.persistence.* // ktlint-disable no-wildcard-imports
 
 @Entity
 @EntityListeners(AuditingEntityListener::class)
-@SQLDelete(sql="UPDATE Character c SET c.available = false WHERE c.id = ?")
-@Table(name="characters", schema = "disney_movies")
-class Character (
+@SQLDelete(sql = "UPDATE Character c SET c.available = false WHERE c.id = ?")
+@Table(name = "characters", schema = "disney_movies")
+class Character(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
     @Column(nullable = false)
-    var name:String,
+    var name: String,
     var age: Int? = null,
     var weight: Double? = null,
     @Column(nullable = false)
@@ -36,6 +36,4 @@ class Character (
     @JsonIgnore
     var modifiedDate: LocalDate? = null
 
-        ) {
-
-}
+)

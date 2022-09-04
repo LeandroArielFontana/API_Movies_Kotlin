@@ -7,10 +7,9 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Service
 
 @Service("userLoginService")
-class UserLoginService (
+class UserLoginService(
 
     repository: JpaRepository<UserLogin, Long>,
     mapper: UserLoginMapper
 
-    ) : AbstractService<UserLoginDTO, UserLogin, Long> (repository, mapper) {
-}
+) : AbstractService<UserLoginDTO, UserLogin, Long>(repository, mapper)

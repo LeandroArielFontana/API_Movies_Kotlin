@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RestController
 @RestController("MovieController")
 @RequestMapping("movies")
 @Tag(name = "Movies", description = "Movies API")
-class MovieController (service: MovieService) :
-    CrudController<MovieDTO, Movie, Long> (service)
+class MovieController(service: MovieService) :
+    CrudController<MovieDTO, Movie, Long>(service)

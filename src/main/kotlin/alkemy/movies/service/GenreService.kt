@@ -7,10 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Service
 
 @Service("genreService")
-class GenreService (
-
+class GenreService(
     repository: JpaRepository<Genre, Long>,
     mapper: GenreMapper
-
-    ): AbstractService<GenreDTO, Genre, Long> (repository, mapper) {
-}
+) : AbstractService<GenreDTO, Genre, Long>(repository, mapper)

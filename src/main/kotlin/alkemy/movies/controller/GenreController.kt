@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RestController
 @RestController("genreController")
 @RequestMapping("genres")
 @Tag(name = "Genres", description = "Genres API")
-class GenreController (service: GenreService) :
-    CrudController<GenreDTO, Genre, Long> (service)
+class GenreController(service: GenreService) :
+    CrudController<GenreDTO, Genre, Long>(service)

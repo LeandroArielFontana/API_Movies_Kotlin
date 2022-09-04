@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController("characterController")
 @RequestMapping("characters")
-@Tag(name="characters", description = "Characters API")
-class CharacterController (service: CharacterService) :
-    CrudController<CharacterDTO, Character, Long> (service)
+@Tag(name = "characters", description = "Characters API")
+class CharacterController(service: CharacterService) :
+    CrudController<CharacterDTO, Character, Long>(service)
